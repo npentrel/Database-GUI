@@ -9,9 +9,9 @@ RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
 COPY app.py /usr/src/app/
 ADD templates /usr/src/app/templates/
 
-# outside Heroku you will generally have to expose a port under which you will
-# then be able to access your application
-# EXPOSE 9000
+# within Heroku you cannot use the EXPOSE command and will have to comment
+# the line below
+EXPOSE 9001
 
 # run the application
 CMD python /usr/src/app/app.py $PORT
