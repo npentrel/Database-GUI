@@ -11,7 +11,7 @@ ADD templates /usr/src/app/templates/
 
 # outside Heroku you will generally have to expose a port under which you will
 # then be able to access your application
-# EXPOSE 9000
+EXPOSE 9001
 
 # run the application
 CMD python /usr/src/app/app.py $PORT
