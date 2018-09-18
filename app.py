@@ -35,7 +35,7 @@ def add_document():
         'index',
         msg=error_msg or "Document successfully added",
         notification=True,
-        success=bool(error_msg)
+        success=not(bool(error_msg))
     ))
 
 
@@ -53,7 +53,7 @@ def delete_doc():
         'index',
         msg=error_msg or "{} successfully deleted".format(oid),
         notification=True,
-        success=bool(error_msg)
+        success=not(bool(error_msg))
     ))
 
 
